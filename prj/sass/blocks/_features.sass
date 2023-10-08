@@ -1,0 +1,23 @@
+.features
+    &-block 
+        display: flex
+        justify-content: space-between
+        font-weight: wrap
+        &__item
+            flex-basis: 33%
+            text-align: center
+            // margin-bottom: 100px
+        &__image
+            width: 70px
+            height: 70px
+@media (max-width: 991px)
+    .features
+        &::-webkit-validation-bubble-text-block
+            &__item
+                flex-basis: 50%
+@media (max-width: 768px)
+    .features
+        &::-webkit-validation-bubble-text-block
+            &__item
+                flex-basis: 100%
+                margin-bottom: 50px
