@@ -433,4 +433,51 @@ input[type=checkbox]:checked + label:before {
     max-width: 470px;
     margin: 10px;
   }
+}
+.blog__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+.blog__title {
+  font-size: 24px;
+  font-family: "Proxima Nova Semibold", sans-serif;
+}
+.blog__link-more {
+  color: #507fe1;
+  font-size: 16px;
+}
+.blog-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.blog-list__image {
+  width: 200px;
+  overflow: hidden;
+}
+.blog-list__text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  min-height: 80px;
+}
+.blog-list__card {
+  margin-bottom: 20px;
+}
+.blog-card {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 1199px) {
+  .blog-list {
+    justify-content: space-around;
+  }
+  .blog-list-card {
+    margin-right: 30px;
+    margin-left: 30px;
+    max-width: 350px;
+  }
 }/*# sourceMappingURL=style.css.map */
