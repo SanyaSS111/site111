@@ -644,4 +644,70 @@ input[type=checkbox]:checked + label:before {
     max-width: 200px;
     margin: auto;
   }
+}
+.footer {
+  padding: 40px 0;
+  background-color: #262626;
+  color: #ffffff;
+}
+.footer-block {
+  display: flex;
+  justify-content: space-between;
+}
+.footer a {
+  color: #fff;
+}
+.footer__title {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: "Proxima Nova Semibold", sans-serif;
+}
+.footer__subtitle {
+  display: block;
+  margin-bottom: 48px;
+}
+.footer__copy {
+  color: #767676;
+}
+.footer-social {
+  text-decoration: none;
+}
+.footer-social__image {
+  max-height: 30px;
+  margin-left: 10px;
+}
+.footer-social__link {
+  text-decoration: none;
+}
+.footer__contacts {
+  text-align: right;
+}
+.footer__phone {
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Proxima Nova Semibold", sans-serif;
+}
+.footer__mail {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.footer__house-logo {
+  margin-top: -30px;
+}
+
+@media (max-width: 768px) {
+  .footer-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer__contacts {
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */
