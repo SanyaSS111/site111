@@ -337,10 +337,10 @@ input[type=checkbox]:checked + label:before {
   .offer__subtitle {
     font-size: 16px;
   }
-  .form__raw {
+  .form__row {
     flex-direction: column;
   }
-  .form__raw-checkbox {
+  .form__row-checkbox {
     font-display: row;
   }
   .form__group {
@@ -352,11 +352,11 @@ input[type=checkbox]:checked + label:before {
   }
 }
 @media (max-width: 480px) {
-  .form__raw-checkbox {
+  .form__row-checkbox {
     flex-direction: column;
     align-items: flex-start;
   }
-  .form__raw__checkbox {
+  .form__row__checkbox {
     margin-bottom: 20px;
   }
 }
@@ -496,7 +496,7 @@ input[type=checkbox]:checked + label:before {
 }
 .price-block {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 .price-block__card {
@@ -553,4 +553,59 @@ input[type=checkbox]:checked + label:before {
   .price-block__card {
     margin: 10px;
   }
+}
+.reviews {
+  background-color: #f5f6f8;
+}
+.reviews-slider {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.reviews-slider__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  text-align: center;
+  padding: 10px;
+  background-color: #b1b1b1;
+  margin: 5px;
+  border-radius: 10px;
+}
+.reviews-slider__image {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #6a99e9;
+  border-radius: 60%;
+  margin: 20px auto;
+}
+.reviews-slider__text {
+  font-size: 14px;
+  position: relative;
+  font-style: italic;
+  max-width: 350px;
+  max-height: 300px;
+  padding: 10px 50px 10px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.reviews-slider__name {
+  display: flex;
+  justify-content: center;
+}
+
+.factory-block {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.factory-block__text {
+  margin-left: 70px;
+  flex-basis: 50%;
+  font-size: 20px;
+}
+.factory-block__image {
+  margin: 20px 0;
 }/*# sourceMappingURL=style.css.map */
