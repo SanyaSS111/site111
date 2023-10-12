@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Белый дом КМВ</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" id="theme">
     <link rel="stylesheet" href="css/necolas.github.io_normalize.css_8.0.1_normalize.css">
     <link rel="stylesheet" href="css/twentytwenty.css">
 </head>
 <body>
     
     <header class="header">
-        <div class="menu ">
+        <div id="menuNav" class="menu ">
             <div class="container">
                 <nav class="menu__nav">
                     <a href="#" class="menu__link">Проекты</a>
@@ -24,10 +24,11 @@
         <div class="navbar">
             <div class="container">
                 <div class="navbar-wrap">
-                    <button class="menu-button navbar__menu-button">
-                        <span class="menu-button__line"></span>
-                        <span class="menu-button__line"></span>
-                        <span class="menu-button__line"></span>
+                    <button id="menu" class="menu-button navbar__menu-button">
+                        <span id="menuLine" class="menu-button__line"></span>
+                        <span id="menuLine" class="menu-button__line"></span>
+                        <span id="menuLine" class="menu-button__line"></span>
+                        <div id="close" class="menu__close"></div>
                     </button>
                     <div class="logo navbar__logo">
                         <strong class="logo--text">Белый дом КМВ</strong>
@@ -42,6 +43,7 @@
                         <!-- <span class="navbar__work-time"></span> -->
                     </div>
                     <button class="button-o navbar__button">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+                    <button id="switchMode" class="button-o button__theme-button">Switch</button>
                 </div>
                 <!-- /.logo navbar__logo -->
             </div>
@@ -358,7 +360,7 @@
             </div>
         </section> -->
 
-        <section class="section before">
+        <!-- <section class="section before">
             <div class="container">
                 <h2 class="section-title section__title">До и после</h2>
                 <div class="before-slider-wrap">
@@ -392,7 +394,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="section reviews">
             <div class="container">
@@ -520,6 +522,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
     <script type="text/javascript" src="https://spikmi.org/Widget?Id=19855"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="js\slick.min.js"></script>

@@ -26,14 +26,13 @@
         color: $text-color
 .menu
     position: fixed
-    z-index: 0
+    z-index: 1
     top: 80px
     width: 100%
     left: 0
     padding: 16px 0px
     background-color: $primary
     color: white
-    transform: translateY(-200%)
     opacity: 0
     &_active
         transform:translateY(0)
@@ -47,6 +46,15 @@
         font-size: 17px
         text-transform: uppercase
         color: #ffffff
+    &__close
+        display: none
+        width: 20px
+        height: 20px
+        --weight: 3px
+        --aa: 1px /* anti-aliasing */
+        --color: #b4a340
+        border-radius: 3px
+        background: linear-gradient(45deg, transparent calc(50% - var(--weight) - var(--aa)), var(--color) calc(50% - var(--weight)), var(--color) calc(50% + var(--weight)), transparent calc(50% + var(--weight) + var(--aa))), linear-gradient(-45deg, transparent calc(50% - var(--weight) - var(--aa)), var(--color) calc(50% - var(--weight)), var(--color) calc(50% + var(--weight)), transparent calc(50% + var(--weight) + var(--aa)))
     &-button
         display: flex
         flex-direction: column
@@ -58,11 +66,13 @@
         border-left: 1px solid rgba(#510bba, 0.1) 
         height: 80px
         width: 70px
+        &:hover
+            cursor: pointer
         &__line
             display: block
             width: 20px
             height: 3px
-            background-color: #89a9eb
+            background-color: #b4a340
             margin: 2px 0
 .logo
     &__text

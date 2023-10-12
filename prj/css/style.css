@@ -126,6 +126,7 @@
 body {
   font-family: "Proxima Nova Light", sans-serif;
   color: #262626;
+  transition: 1s;
 }
 
 img {
@@ -146,11 +147,11 @@ img {
 }
 
 .button-o {
-  border: 2px solid #507fe1;
+  border: 2px solid #b4a340;
   padding: 17px 22px;
   font-size: 12px;
   text-transform: uppercase;
-  color: #507fe1;
+  color: #b4a340;
   font-family: "Proxima Nova Semibold", sans-serif;
   background-color: #fff;
   text-decoration: none;
@@ -161,23 +162,26 @@ img {
   border: none;
   text-transform: uppercase;
   padding: 25px 45px;
-  background-color: #507fe1;
+  background-color: #b4a340;
   color: #fff;
   font-family: "Proxima Nova Semibold", sans-serif;
+}
+.button-o:hover {
+  cursor: pointer;
 }
 .button:hover {
   cursor: pointer;
 }
 .button-fitting {
-  color: #507fe1;
+  color: #b4a340;
   background-color: #fff;
 }
 .button-add {
-  background-color: #7c9fe8;
+  background-color: #c7b860;
   color: #fff;
 }
 .button-like {
-  background-color: #507fe1;
+  background-color: #b4a340;
   height: 30px;
   width: 30px;
   border: none;
@@ -197,7 +201,7 @@ input[type=checkbox] {
   display: none;
 }
 input[type=checkbox]:checked + label:before {
-  background: #507fe1;
+  background: #b4a340;
 }
 
 .checkbox-label {
@@ -262,14 +266,13 @@ input[type=checkbox]:checked + label:before {
 
 .menu {
   position: fixed;
-  z-index: 0;
+  z-index: 1;
   top: 80px;
   width: 100%;
   left: 0;
   padding: 16px 0px;
-  background-color: #507fe1;
+  background-color: #b4a340;
   color: white;
-  transform: translateY(-200%);
   opacity: 0;
 }
 .menu_active {
@@ -286,6 +289,16 @@ input[type=checkbox]:checked + label:before {
   text-transform: uppercase;
   color: #ffffff;
 }
+.menu__close {
+  display: none;
+  width: 20px;
+  height: 20px;
+  --weight: 3px;
+  --aa: 1px /* anti-aliasing */;
+  --color: #b4a340;
+  border-radius: 3px;
+  background: linear-gradient(45deg, transparent calc(50% - var(--weight) - var(--aa)), var(--color) calc(50% - var(--weight)), var(--color) calc(50% + var(--weight)), transparent calc(50% + var(--weight) + var(--aa))), linear-gradient(-45deg, transparent calc(50% - var(--weight) - var(--aa)), var(--color) calc(50% - var(--weight)), var(--color) calc(50% + var(--weight)), transparent calc(50% + var(--weight) + var(--aa)));
+}
 .menu-button {
   display: flex;
   flex-direction: column;
@@ -298,11 +311,14 @@ input[type=checkbox]:checked + label:before {
   height: 80px;
   width: 70px;
 }
+.menu-button:hover {
+  cursor: pointer;
+}
 .menu-button__line {
   display: block;
   width: 20px;
   height: 3px;
-  background-color: #89a9eb;
+  background-color: #b4a340;
   margin: 2px 0;
 }
 
@@ -461,12 +477,12 @@ input[type=checkbox]:checked + label:before {
 }
 
 @media (max-width: 991px) {
-  .features::-webkit-validation-bubble-text-block__item {
+  .features-block__item {
     flex-basis: 50%;
   }
 }
 @media (max-width: 768px) {
-  .features::-webkit-validation-bubble-text-block__item {
+  .features-block__item {
     flex-basis: 100%;
     margin-bottom: 50px;
   }
@@ -486,12 +502,20 @@ input[type=checkbox]:checked + label:before {
   max-width: 570px;
   position: relative;
   box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+  overflow-y: hidden;
+}
+.catalog-card:hover .catalog-card__buttons {
+  transform: translate(0);
+  opacity: 1;
 }
 .catalog-card__buttons {
   display: flex;
   position: absolute;
   bottom: 0;
   right: 0;
+  transition: 0.2s;
+  opacity: 0;
+  transform: translateY(100%);
 }
 .catalog-card__button {
   border: none;
@@ -508,7 +532,7 @@ input[type=checkbox]:checked + label:before {
   font-size: 12px;
   text-transform: uppercase;
   color: #fff;
-  background-color: rgba(80, 127, 225, 0.6);
+  background-color: rgba(180, 163, 64, 0.6);
 }
 .catalog-card__image {
   display: block;
@@ -544,7 +568,7 @@ input[type=checkbox]:checked + label:before {
   font-family: "Proxima Nova Semibold", sans-serif;
 }
 .blog__link-more {
-  color: #507fe1;
+  color: #b4a340;
   font-size: 16px;
 }
 .blog-list {
@@ -663,7 +687,7 @@ input[type=checkbox]:checked + label:before {
   display: block;
   width: 70px;
   height: 70px;
-  border: 2px solid #6a99e9;
+  border: 2px solid #b4a340;
   border-radius: 60%;
   margin: 20px auto;
 }
